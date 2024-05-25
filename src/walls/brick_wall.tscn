@@ -78,4 +78,5 @@ surface_material_override/0 = ExtResource("1_w0m61")
 surface_material_override/1 = ExtResource("2_4tcsk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
 shape = SubResource("ConvexPolygonShape3D_bhcqa")

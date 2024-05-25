@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8q0pxva5x2bk"]
+
+[ext_resource type="PackedScene" uid="uid://dfhk8voo26lrt" path="res://src/walls/brick_wall.tscn" id="1_0gojx"]
+
+[node name="NormalDoorRoom" type="Node3D"]
+
+[node name="brickWall2" parent="." instance=ExtResource("1_0gojx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0488331, 0, 2.54994)
+
+[node name="brickWall4" parent="." instance=ExtResource("1_0gojx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.94654, 0, 2.54994)
+
+[node name="brickWall3" parent="." instance=ExtResource("1_0gojx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.0145319, 0, -1.43681)
+
+[node name="brickWall5" parent="." instance=ExtResource("1_0gojx")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.00991, 0, -1.43681)
+
+[node name="brickWall6" parent="." instance=ExtResource("1_0gojx")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -1.73838, 0, 2.23388)
+
+[node name="brickWall7" parent="." instance=ExtResource("1_0gojx")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -1.75983, 0, 0.252106)
+
+[node name="Roof" parent="." instance=ExtResource("1_0gojx")]
+transform = Transform3D(4, 0, 0, 0, -2.62268e-07, -2, 0, 6, -8.74228e-08, 1.01388, 2.32283, -0.742794)
