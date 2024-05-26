@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgv7oiy5vfaw6"]
+
+[ext_resource type="PackedScene" uid="uid://dgi8a4hsskny4" path="res://src/player/player.tscn" id="1_nndyl"]
+[ext_resource type="Script" path="res://src/enemy/enemy.gd" id="2_m5eal"]
+
+[node name="Enemy" instance=ExtResource("1_nndyl")]
+script = ExtResource("2_m5eal")
+
+[node name="Indicator" parent="." index="3"]
+visible = false

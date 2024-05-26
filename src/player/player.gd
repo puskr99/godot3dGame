@@ -17,8 +17,8 @@ var is_fpp: bool = false
 
 
 func _ready() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
+#	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	pass
 
 func _unhandled_input(event) -> void:
 	if event is InputEventMouseMotion:
@@ -44,7 +44,7 @@ func _physics_process(delta):
 		return
 		
 	# Handle Sprint.
-	if Input.is_key_pressed(KEY_SPACE):
+	if Input.is_key_pressed(KEY_SHIFT):
 		speed = run_speed
 		is_running = true
 	else:
@@ -60,16 +60,19 @@ func _physics_process(delta):
 			visauls.look_at(position + direction)
 			
 			if is_running:
+				AudioPlayer.play_footstep_sound(2.0)
 				if animation_player.current_animation != "running":
 					animation_player.play("running")
 			
 			else:
+				AudioPlayer.play_footstep_sound()
 				if animation_player.current_animation != "walking":
 					animation_player.play("walking")
 				
 			velocity.x = direction.x * speed
 			velocity.z = direction.z * speed
 		else:
+			AudioPlayer.stop_footstep_sound()
 			velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
 			velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
 			if animation_player.current_animation != "idle":

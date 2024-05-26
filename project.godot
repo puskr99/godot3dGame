@@ -15,6 +15,10 @@ run/main_scene="res://src/world/world.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AudioPlayer="*res://src/autoloads/audio_player.tscn"
+
 [input]
 
 forward={
